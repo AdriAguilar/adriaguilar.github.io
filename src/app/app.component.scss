@@ -1,0 +1,9 @@
+.noise {
+    background: url(../assets/noise.gif);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    opacity: .04;
+    pointer-events: none;
+}

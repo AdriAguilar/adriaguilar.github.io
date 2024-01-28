@@ -1,10 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: FoundryGridnik;
-    src: url(assets/font/FoundryGridnik_Regular.otf) format("opentype");
+    src: url(assets/fonts/FoundryGridnik_Regular.otf) format("opentype");
 }
+
+@font-face {
+    font-family: Roboto Slab;
+    src: url(assets/fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'FoundryGridnik';
 }
