@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'text-scramble',
-  template: `<span [innerHTML]="text"></span>`
+  templateUrl: './text-scramble.component.html'
 })
 export class TextScrambleComponent implements OnInit {
   @Input() phrases: string[] = [];
