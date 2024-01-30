@@ -15,6 +15,11 @@ module.exports = {
     colors: {
       'white-txt': '#ccc',
       'black-txt': '#333'
+    },
+    extend: {
+      screens: {
+        '3xl': '2000px'
+      }
     }
   },
   plugins: [],

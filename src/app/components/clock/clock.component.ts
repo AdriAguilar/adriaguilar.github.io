@@ -2,12 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, map, share, timer } from 'rxjs';
 
 @Component({
-  selector: 'clock',
+  selector: 'app-clock',
   templateUrl: './clock.component.html'
 })
 export class ClockComponent implements OnInit, OnDestroy {
   rxTime: Date = new Date();
-  intervalId: number;
   sub: Subscription;
 
   ngOnInit(): void {

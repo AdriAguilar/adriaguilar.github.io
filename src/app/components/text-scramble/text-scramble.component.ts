@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './text-scramble.component.html'
 })
 export class TextScrambleComponent implements OnInit {
-  @Input() phrases: string[] = [];
+  @Input() inputText: string[] = [];
   private chars: string = "!<>-_\\/[]{}—=+*^?#________";
   private frameRequest: number;
   private frame: number = 0;
@@ -53,7 +53,7 @@ export class TextScrambleComponent implements OnInit {
           char = this.randomChar();
           this.queue[i].char = char;
         }
-        output += `<span class="dud">${char}</span>`;
+        output += `<span>${char}</span>`;
       } else {
         output += from;
       }
@@ -72,7 +72,7 @@ export class TextScrambleComponent implements OnInit {
   }
 
   next() {
-    this.setText(this.phrases[this.phrasesCounter]);
-    this.phrasesCounter = (this.phrasesCounter + 1) % this.phrases.length;
+    this.setText(this.inputText[this.phrasesCounter]);
+    this.phrasesCounter = (this.phrasesCounter + 1) % this.inputText.length;
   }
 }
