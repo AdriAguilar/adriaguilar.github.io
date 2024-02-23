@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  isDarkMode: boolean = false;
+  isDarkMode: boolean = true;
   presentTheme$ = new BehaviorSubject<string>('light');
   phrases: string[] = ["FRIEND", "DEVELOPER", "DESIGNER", "COFFEE DRINKER", "IT RECRUITER", "HR"];
 

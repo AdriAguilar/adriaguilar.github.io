@@ -3,20 +3,23 @@
 
     <!-- Noise -->
     <div class="noise"></div>
+
+    <!-- Dark/light mode button -->
+    <div class="absolute bottom-8 right-8">
+        <button class="transition-transform hover:scale-125 align-middle"
+                (click)="changeTheme()">
+            <div *ngIf="isDarkMode" class="w-7 h-7 rounded-full bg-white-bg cursor-pointer"></div>
+            <div *ngIf="!isDarkMode" class="w-7 h-7 rounded-full bg-black-bg cursor-pointer"></div>
+        </button>
+    </div>
     
-    <div class="px-6 py-5 h-screen flex flex-col justify-between">
+    <!-- Header -->
+    <header class="px-6 py-5">
         <div class="gap-4 flex items-center justify-between text-xs sm:text-sm lg:text-sm 3xl:text-xl">
             <span>
                 WELCOME, DEAR <text-scramble [inputText]="phrases"></text-scramble> />
             </span>
             <app-clock></app-clock>
         </div>
-        <div class="mb-1 flex justify-end">
-            <button class="transition-transform hover:scale-125 align-middle"
-                    (click)="changeTheme()">
-                <div *ngIf="isDarkMode" class="w-6 h-6 rounded-full bg-white-bg cursor-pointer"></div>
-                <div *ngIf="!isDarkMode" class="w-6 h-6 rounded-full bg-black-bg cursor-pointer"></div>
-            </button>
-        </div>
-    </div>
+    </header>
 </body>
