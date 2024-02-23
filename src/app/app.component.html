@@ -1,9 +1,22 @@
-<!-- Noise -->
-<div class="noise"></div>
+<body [ngClass]="{'dark': isDarkMode}"
+      class="font-RobotoSlab transition-all bg-white-bg text-black-txt selection:bg-black-bg selection:text-white-txt dark:bg-black-bg dark:text-white-txt dark:selection:bg-white-bg dark:selection:text-black-txt">
 
-<div class="px-6 py-5 gap-4 flex items-center justify-between text-xs sm:text-sm lg:text-sm 3xl:text-xl">
-    <span>
-        WELCOME, DEAR <text-scramble [inputText]="phrases"></text-scramble> />
-    </span>
-    <app-clock></app-clock>
-</div>
+    <!-- Noise -->
+    <div class="noise"></div>
+    
+    <div class="px-6 py-5 h-screen flex flex-col justify-between">
+        <div class="gap-4 flex items-center justify-between text-xs sm:text-sm lg:text-sm 3xl:text-xl">
+            <span>
+                WELCOME, DEAR <text-scramble [inputText]="phrases"></text-scramble> />
+            </span>
+            <app-clock></app-clock>
+        </div>
+        <div class="mb-1 flex justify-end">
+            <button class="transition-transform hover:scale-125 align-middle"
+                    (click)="changeTheme()">
+                <div *ngIf="isDarkMode" class="w-6 h-6 rounded-full bg-white-bg cursor-pointer"></div>
+                <div *ngIf="!isDarkMode" class="w-6 h-6 rounded-full bg-black-bg cursor-pointer"></div>
+            </button>
+        </div>
+    </div>
+</body>
