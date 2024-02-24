@@ -5,11 +5,11 @@
     <div class="noise"></div>
 
     <!-- Dark/light mode button -->
-    <div class="absolute bottom-8 right-8">
+    <div class="fixed bottom-8 right-8">
         <button class="transition-transform hover:scale-125 align-middle"
                 (click)="changeTheme()">
-            <div *ngIf="isDarkMode" class="w-7 h-7 rounded-full bg-white-bg cursor-pointer"></div>
-            <div *ngIf="!isDarkMode" class="w-7 h-7 rounded-full bg-black-bg cursor-pointer"></div>
+            <div *ngIf="isDarkMode" class="w-4 h-4 sm:w-6 sm:h-6 bg-white-bg cursor-pointer"></div>
+            <div *ngIf="!isDarkMode" class="w-4 h-4 sm:w-6 sm:h-6 bg-black-bg cursor-pointer"></div>
         </button>
     </div>
     
