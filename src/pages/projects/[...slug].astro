@@ -19,7 +19,7 @@ const { Content } = await render(project);
 ---
 
 <Layout
-  siteTitle={Astro.props.data.title}
+  siteTitle={Astro.props.data.title.toUpperCase()}
   siteDescription={Astro.props.data.description}
   headerCosmeticText="PROJECT"
 >

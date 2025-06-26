@@ -20,7 +20,7 @@ const heroTags: Set<string> = new Set(
 
 const cosmeticTexts: { [section: string]: string } = {
   header: "PORTFOLIO",
-  hero: "CLICK ON A TAG",
+  hero: "PROJECTS",
   about: "ABOUT ME",
 };
 ---
@@ -51,12 +51,12 @@ const cosmeticTexts: { [section: string]: string } = {
       <div class="group/image aspect-square h-48 w-48 mx-auto my-auto rounded-interactive bg-accent md:mx-0">
         <img class="h-48 w-48 scale-110 -rotate-z-12 overflow-clip object-cover rounded-interactive group-hover/image:scale-[101%] group-hover/image:-rotate-z-0 duration-200"
           src={userPicture.src}
-          alt={`${userName}'s profile picture.`}
+          alt={`${userName}'s profile.`}
         />
       </div>
 
       <div class="my-auto text-pretty">
-        <h1 class="text-xl">Hi.</h1>
+        <h1 class="text-xl">Hola.</h1>
         <p>{userIntroduction}</p>
       </div>
     </div>

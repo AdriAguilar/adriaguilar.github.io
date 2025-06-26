@@ -42,13 +42,3 @@
 .dark body {
   background-color: var(--color-primary);
 }
-
-/* Agregar la transición para los elementos que cambian de color */
-.transition-theme {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* Asegurar que los elementos específicos también tengan transición */
-.transition-theme * {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
