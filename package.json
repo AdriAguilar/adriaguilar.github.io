@@ -1,11 +1,11 @@
 {
-  "name": "backroom",
+  "name": "portfolio",
   "author": {
-    "name": "Kadir Lofca",
-    "url": "https://kadirlofca.com"
+    "name": "Adrian",
+    "url": "https://adriaguilar.com"
   },
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
