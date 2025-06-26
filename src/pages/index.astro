@@ -10,11 +10,12 @@ import { userProfessionalDescription } from "../data/user-professional.json";
 import { userIntroduction, userName } from "../data/user-personal.json";
 import userPicture from "../../public/user-picture.jpeg";
 import { getCollection } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
 
-const allPosts = (await getCollection("posts")).filter((post) => post.data.published);
+const allPosts = (await getCollection("posts")).filter((post: CollectionEntry<"posts"> & { data: { published: boolean } }): boolean => post.data.published);
 
 const heroTags: Set<string> = new Set(
-  allPosts.flatMap((post) => post.data.tags),
+  allPosts.flatMap((post: CollectionEntry<"posts"> & { data: { tags: string[] } }) => post.data.tags),
 );
 
 const cosmeticTexts: { [section: string]: string } = {
