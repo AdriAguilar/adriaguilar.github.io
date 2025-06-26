@@ -5,7 +5,7 @@ description: "Aplicación móvil de las fiestas de Moros y Cristianos de Orihuel
 tags: ["Flutter", "Dart", "Firebase"]
 date: "2025"
 ---
-# 🎉 Proyecto Moros y Cristianos
+# 🎉 Proyecto Moros y Cristianos Orihuela (AMYCO)
 
 ## 📌 Descripción
 
@@ -29,4 +29,4 @@ Actualmente en desarrollo con funcionalidades básicas ya implementadas. Se est�
 
 ## 📂 Repositorio
 
-Puedes consultar el código fuente en: **[GitHub - PROYECTO-MOROS-Y-CRISTIANOS](https://github.com/JonathanCampico/PROYECTO-MOROS-Y-CRISTIANOS)**
+Puedes consultar el código fuente en: <a href="https://github.com/JonathanCampico/PROYECTO-MOROS-Y-CRISTIANOS" target="_blank">**GitHub - PROYECTO-MOROS-Y-CRISTIANOS**</a>

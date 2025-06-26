@@ -51,7 +51,12 @@
 {#snippet projectCard(project: CollectionEntry<'projects'>)}
     <a href={`/projects/${project.id}`} class="flex flex-col justify-between gap-2 min-h-32 h-full p-2 border rounded-interactive border-edge bg-linear-to-b from-secondary to-secondary/60 pointer-events-auto hover:border-accent duration-200">
         <div>
-            <h2 class="text-xl font-bold">{project.data.title}</h2>
+            <div class="flex flex-row justify-between">
+                <h2 class="text-xl font-bold">{project.data.title}</h2>
+                <time datetime={project.data.date.toISOString()} class="opacity-60 pr-1">
+                    {project.data.date.toLocaleDateString("es-ES", { year: "numeric" })}
+                </time>
+            </div>
             <p>{project.data.description}</p>
         </div>
         <div class="flex flex-row gap-2 overflow-hidden text-accent">
