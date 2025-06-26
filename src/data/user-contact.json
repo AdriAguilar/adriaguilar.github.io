@@ -4,11 +4,18 @@
   "userSocials": [
     {
       "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/adrian-aguilar-trivi%C3%B1o/"
+      "link": "https://www.linkedin.com/in/adrian-aguilar-trivi%C3%B1o/",
+      "download": false
     },
     {
       "title": "GitHub",
-      "link": "https://github.com/AdriAguilar"
+      "link": "https://github.com/AdriAguilar",
+      "download": false
+    },
+    {
+      "title": "Curriculum Vitae",
+      "link": "/cv.pdf",
+      "download": true
     }
   ]
 }
