@@ -5,23 +5,23 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import { render } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("posts");
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: post,
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: project,
   }));
 }
 
-type Props = CollectionEntry<"posts">;
-const post = Astro.props;
+type Props = CollectionEntry<"projects">;
+const project = Astro.props;
 
-const { Content } = await render(post);
+const { Content } = await render(project);
 ---
 
 <Layout
   siteTitle={Astro.props.data.title}
   siteDescription={Astro.props.data.description}
-  headerCosmeticText="POST"
+  headerCosmeticText="PROJECT"
 >
   <Section class="prose-lg p-8">
     <Content />

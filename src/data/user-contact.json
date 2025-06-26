@@ -1,14 +1,14 @@
 {
-  "userEmail": "user@email.com",
-  "userPhoneNumber": "user-phone-number",
+  "userEmail": "adritrivi41@gmail.com",
+  "userPhoneNumber": "695148121",
   "userSocials": [
     {
       "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/linkedinHandle"
+      "link": "https://www.linkedin.com/in/adrian-aguilar-trivi%C3%B1o/"
     },
     {
       "title": "GitHub",
-      "link": "https://www.github.com/githubUsername"
+      "link": "https://github.com/AdriAguilar"
     }
   ]
 }
