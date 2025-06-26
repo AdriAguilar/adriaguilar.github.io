@@ -2,7 +2,6 @@
     import { type CollectionEntry } from 'astro:content';
     import { filters } from '../../stores/filters.store';
     import Filters from './Filters.svelte';
-    import Tags from './Tags.svelte';
     
     interface Props {
         allProjects: CollectionEntry<'projects'>[];
