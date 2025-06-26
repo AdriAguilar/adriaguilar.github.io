@@ -1,0 +1,20 @@
+---
+import Arrow from '../components/Arrow.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  siteTitle="Página no encontrada"
+  siteDescription="Parece que la página que buscas no existe."
+  headerCosmeticText="Error 404"
+>
+  <div class="flex flex-col items-center justify-center min-h-[48vh] m-auto px-4 text-center">
+    <h1 class="text-9xl">404</h1>
+    <p class="text-2xl mb-4">Página no encontrada</p>
+    <p class="text-lg mb-8">Parece que te has perdido y la página que buscas no existe.</p>
+    <a class="hover:brightness-125 duration-200" href="/">
+      Volver al inicio
+      <Arrow class="stroke-primary-foreground" rotate={-45} />
+    </a>
+  </div>
+</Layout>
