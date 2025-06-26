@@ -1,6 +1,7 @@
 ---
 import Section from "./Section.astro";
 import Arrow from "../components/Arrow.astro";
+import DarkModeToggle from "../components/reactive/DarkModeToggle.svelte";
 
 import { userSocials, userEmail } from "../data/user-contact.json";
 import { userName } from "../data/user-personal.json";
@@ -36,6 +37,10 @@ import CosmeticText from "./CosmeticText.astro";
     {userEmail}
     <Arrow class="stroke-primary-foreground" rotate={-45} />
   </a>
+
+  <div class="ml-auto">
+    <DarkModeToggle client:load />
+  </div>
 </Section>
 
 <Section class="flex flex-row justify-end gap-8 m-auto min-h-48 text-center">
