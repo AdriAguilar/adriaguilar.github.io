@@ -3,12 +3,23 @@
     import { fade } from "svelte/transition";
     import { onMount } from "svelte";
     import { cn } from '../../styles/cn.ts';
+    import data from '../../data/tags.json';
 
     interface Props {
         tags: string[];
     }
 
     const { tags }: Props = $props();
+    const otherTags = data.tags;
+
+    const allTags = [...new Set([...tags, ...otherTags])];
+
+    allTags.sort((a, b) => {
+        const includesA = $filters.includes(a);
+        const includesB = $filters.includes(b);
+        return includesA && includesB ? 0 : includesA ? -1 : 1;
+    });
+
     let isMounted: boolean = $state(false);
 
     onMount(() => {
@@ -25,7 +36,7 @@
 {/snippet}
 
 <div class="flex flex-row flex-wrap justify-center gap-2 mt-4 text-lg">
-    {#each tags as title}
+    {#each allTags as title}
         {@render tag(title)}
     {/each}
 </div>

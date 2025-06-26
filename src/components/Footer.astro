@@ -1,24 +1,30 @@
 ---
 import Section from "./Section.astro";
 import Arrow from "../components/Arrow.astro";
+import DarkModeToggle from "../components/reactive/DarkModeToggle.svelte";
 
 import { userSocials, userEmail } from "../data/user-contact.json";
 import { userName } from "../data/user-personal.json";
+import CosmeticText from "./CosmeticText.astro";
 ---
 
 <Section class="flex flex-row p-2">
-  <a class="my-auto hover:brightness-125" href="/"><h1>{userName}</h1></a>
+  <a class="my-auto hover:brightness-125" href="/">
+    <h1>{userName}</h1>
+  </a>
 
   <!-- USER CONTACT -->
   <div class="hidden ml-auto md:flex md:flex-col">
     <div class="flex flex-row-reverse flex-wrap gap-4">
-      <a class="hover:brightness-125 duration-200" href={`mailto:${userEmail}`}
-        >{userEmail}<Arrow class="stroke-primary-foreground" rotate={-45} /></a
-      >
+      <a class="hover:brightness-125 duration-200" href={`mailto:${userEmail}`}>
+        {userEmail}
+        <Arrow class="stroke-primary-foreground" rotate={-45} />
+      </a>
       {
         userSocials.map((social) => (
-          <a class="hover:brightness-125 duration-200" href={social.link}>
-            {social.title}<Arrow class="stroke-primary-foreground" rotate={-45} />
+          <a class="hover:brightness-125 duration-200" href={social.link} download={social.download} target={social.download ? "_self" : "_blank"}>
+            {social.title}
+            <Arrow class="stroke-primary-foreground" rotate={-45} />
           </a>
         ))
       }
@@ -31,21 +37,12 @@ import { userName } from "../data/user-personal.json";
     {userEmail}
     <Arrow class="stroke-primary-foreground" rotate={-45} />
   </a>
+
+  <div class="ml-auto">
+    <DarkModeToggle client:load />
+  </div>
 </Section>
 
-<!-- CREDITS -->
-<Section class="flex flex-row justify-center gap-8 m-auto py-16 text-center">
-  <a class="hover:brightness-125 duration-200"
-    target="_blank"
-    rel="noopener noreferrer"
-    href="https://github.com/kadirlofca/backroom"
-    >Site template by Kadir Lofca <Arrow class="stroke-primary-foreground"
-      rotate={-45}
-    /></a
-  >
-  <div class="group w-24 p-1 border border-primary-foreground rounded-interactive text-primary-foreground text-xs font-black text-nowrap opacity-60"
-  >
-    <span class="group-hover:hidden">100% HANDMADE</span>
-    <span class="hidden group-hover:inline">0% AI</span>
-  </div>
+<Section class="flex flex-row justify-end gap-8 m-auto min-h-48 text-center">
+  <CosmeticText text="100% HANDMADE"/>
 </Section>

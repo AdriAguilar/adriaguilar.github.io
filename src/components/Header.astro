@@ -21,7 +21,7 @@ const { cosmeticText = "" } = Astro.props;
 
   <span class="mt-auto">
     <CosmeticText
-      text={new Date().toLocaleDateString("en-us", { year: "numeric", month: "short" }).toUpperCase()}
+      text={new Date().toLocaleDateString("es-ES", { year: "numeric", month: "short", day: "numeric" }).toUpperCase()}
     />
   </span>
 </Section>
@@ -41,7 +41,7 @@ const { cosmeticText = "" } = Astro.props;
     <div class="flex flex-row-reverse flex-wrap gap-4">
       {
         userSocials.map((social) => (
-          <a class="hover:brightness-125 duration-200" href={social.link}>
+          <a class="hover:brightness-125 duration-200" href={social.link} download={social.download} target={social.download ? "_self" : "_blank"}>
             {social.title}<Arrow class="stroke-primary-foreground" rotate={-45} />
           </a>
         ))

@@ -16,6 +16,18 @@ const { siteTitle, siteDescription, headerCosmeticText } = Astro.props;
 <html lang="en" class="bg-primary">
   <head>
     <Head pageTitle={siteTitle} pageDescription={siteDescription} />
+    <script is:inline>
+      // Inicializar modo oscuro basado en la preferencia del sistema
+      if (typeof window !== 'undefined') {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedMode = localStorage.getItem('darkMode');
+        
+        // Si no hay modo guardado, usar la preferencia del sistema
+        if (savedMode === null) {
+          document.documentElement.classList.toggle('dark', prefersDark);
+        }
+      }
+    </script>
   </head>
   <body>
     <main class="min-h-svh">
