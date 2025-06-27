@@ -22,7 +22,7 @@ import CosmeticText from "./CosmeticText.astro";
       </a>
       {
         userSocials.map((social) => (
-          <a class="hover:brightness-125 duration-200" href={social.download ? `/portfolio/${social.link}` : social.link} download={social.download} target={social.download ? "_self" : "_blank"}>
+          <a class="hover:brightness-125 duration-200" href={social.download ? `${social.link}` : social.link} download={social.download} target={social.download ? "_self" : "_blank"}>
             {social.title}
             <Arrow class="stroke-primary-foreground" rotate={-45} />
           </a>

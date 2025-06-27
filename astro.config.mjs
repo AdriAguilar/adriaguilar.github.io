@@ -7,10 +7,8 @@ import { siteUrl } from "./src/data/site.json";
 
 // https://astro.build/config
 export default defineConfig({
-  base: "/portfolio/",
   vite: {
     plugins: [tailwindcss()],
-    base: "/portfolio/"
   },
   integrations: [svelte(), sitemap()],
   site: siteUrl,
