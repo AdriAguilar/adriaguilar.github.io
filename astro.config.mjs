@@ -16,6 +16,6 @@ export default defineConfig({
   site: siteUrl,
   build: {
     format: "file",
-    assets: "assets/"
+    assets: "assets"
   }
 });

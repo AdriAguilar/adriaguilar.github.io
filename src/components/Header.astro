@@ -27,7 +27,7 @@ const { cosmeticText = "" } = Astro.props;
 </Section>
 
 <Section class="flex flex-row p-2">
-  <a class="hover:brightness-125" href="/"
+  <a class="hover:brightness-125" href="/portfolio"
     ><h1 class="text-4xl sm:text-5xl">{userName}</h1></a
   >
 
@@ -41,7 +41,7 @@ const { cosmeticText = "" } = Astro.props;
     <div class="flex flex-row-reverse flex-wrap gap-4">
       {
         userSocials.map((social) => (
-          <a class="hover:brightness-125 duration-200" href={social.link} download={social.download} target={social.download ? "_self" : "_blank"}>
+          <a class="hover:brightness-125 duration-200" href={social.download ? `/portfolio/${social.link}` : social.link} download={social.download} target={social.download ? "_self" : "_blank"}>
             {social.title}<Arrow class="stroke-primary-foreground" rotate={-45} />
           </a>
         ))

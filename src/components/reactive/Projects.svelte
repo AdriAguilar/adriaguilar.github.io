@@ -49,7 +49,7 @@
 </script>
 
 {#snippet projectCard(project: CollectionEntry<'projects'>)}
-    <a href={`/projects/${project.id}`} class="flex flex-col justify-between gap-2 min-h-32 h-full p-2 border rounded-interactive border-edge bg-linear-to-b from-secondary to-secondary/60 pointer-events-auto hover:border-accent duration-200">
+    <a href={`/portfolio/projects/${project.id}`} class="flex flex-col justify-between gap-2 min-h-32 h-full p-2 border rounded-interactive border-edge bg-linear-to-b from-secondary to-secondary/60 pointer-events-auto hover:border-accent duration-200">
         <div>
             <div class="flex flex-row justify-between">
                 <h2 class="text-xl font-bold">{project.data.title}</h2>
