@@ -5,6 +5,8 @@
 
 @plugin "@tailwindcss/typography";
 
+@source "./components/**/*.{svelte,astro}";
+
 @theme {
   --theme-hue: 0;
   --color-primary: hsl(0, 0%, 98%);             /* Casi blanco */

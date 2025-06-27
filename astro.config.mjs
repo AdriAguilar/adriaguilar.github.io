@@ -2,18 +2,20 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import svelte from "@astrojs/svelte";
-import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { siteUrl } from "./src/data/site.json";
 
 // https://astro.build/config
 export default defineConfig({
+  base: "/portfolio/",
   vite: {
     plugins: [tailwindcss()],
+    base: "/portfolio/"
   },
-  integrations: [svelte(), mdx(), sitemap()],
+  integrations: [svelte(), sitemap()],
   site: siteUrl,
-  redirects: {
-    "/projects": "/", // redirect from /projects because that page doesn't exist.
-  },
+  build: {
+    format: "file",
+    assets: "assets/"
+  }
 });
