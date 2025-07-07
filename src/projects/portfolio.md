@@ -28,6 +28,6 @@ Este proyecto es mi portfolio personal, diseñado para presentar mis proyectos, 
 
 ¿Tú que crees? 😅
 
-## Repositorio
+## 📂 Repositorio
 
 Puedes consultar el código fuente en: <a href="https://github.com/AdriAguilar/Portfolio" target="_blank">**GitHub - PROYECTO PORTFOLIO**</a>
