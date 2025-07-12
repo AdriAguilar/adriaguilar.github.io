@@ -2,6 +2,7 @@
 import Section from "./Section.astro";
 import Arrow from "../components/Arrow.astro";
 import Menu from "../components/reactive/Menu.svelte";
+import CurrentDate from "./reactive/CurrentDate.svelte";
 
 import { userSocials, userEmail } from "../data/user-contact.json";
 import { userName } from "../data/user-personal.json";
@@ -20,9 +21,7 @@ const { cosmeticText = "" } = Astro.props;
   </div>
 
   <span class="mt-auto">
-    <CosmeticText
-      text={new Date().toLocaleDateString("es-ES", { year: "numeric", month: "short", day: "numeric" }).toUpperCase()}
-    />
+    <CurrentDate client:load />
   </span>
 </Section>
 
