@@ -28,3 +28,6 @@ Thumbs.db
 # lockfiles (keep only the one you use)
 yarn.lock
 pnpm-lock.yaml
+
+# deploy
+deploy.txt
